@@ -1,3 +1,38 @@
-<p>
-  add-movies works!
-</p>
+<div class="dive"> 
+  <mat-card class="matcard">
+      <mat-card-header><h2><b>Add Item</b></h2></mat-card-header>
+             
+              <mat-card-content class="container">
+<form action="/action_page.php">
+
+  <label for="fname">Item Type</label>
+  <input type="text"  name="type" [(ngModel)]='movie.type'  placeholder="item type">
+
+  <label for="fname">Item Name</label>
+  <input type="text"  name="name" [(ngModel)]='movie.name' placeholder="item name">
+
+  <label for="fname">Item Model</label>
+  <input type="text"  name="model" [(ngModel)]='movie.model' placeholder="item model">
+
+  <label for="fname">Item Qr</label>
+  <input type="text"  name="qr" [(ngModel)]='movie.qr' placeholder="item qr">
+
+  <label for="fname">Item Status</label>
+  <input type="text"  name="status" [(ngModel)]='movie.status'  placeholder="item status">
+
+  <label for="fname">Item Capacity</label>
+  <input type="text"  name="capacity" [(ngModel)]='movie.capacity'  placeholder="item capacity">
+
+  <label for="fname">Item image</label>
+  <input type="text"  name="image" [(ngModel)]='movie.image'  placeholder="item image">
+
+    <mat-card-actions class="buttonContainer">
+        <button mat-button color="warn" (click)="cancel()">Cancel</button>
+        <button mat-raised-button color="primary" (click)="addMovie()" >Submit</button>
+        </mat-card-actions>
+    </form>
+    </mat-card-content>
+    </mat-card>
+    </div>
+
+    <app-all-movies></app-all-movies>
