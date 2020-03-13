@@ -1,0 +1,28 @@
+.example-card {
+    max-width: 100%;
+    max-height: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-block-end: 5%;
+    background: white;
+  opacity: 1;
+  
+  }
+  
+  .example-header-image {
+    background-image: url('https://freepngimg.com/thumb/joker/68946-joker-batman-tattoo-quinn-harley-free-clipart-hd-thumb.png');
+    background-size: cover;
+    font-weight: bold;
+  }
+
+  .footer-copyright{
+    text-align: center !important;
+    margin-bottom: 0px;
+    
+  }
+  
+  .left{
+    align-items: flex-start;
+    padding-right: 400px;
+
+  }
