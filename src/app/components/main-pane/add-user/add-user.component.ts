@@ -13,11 +13,11 @@ export class AddUserComponent implements OnInit {
 
   user:User={
     EmpID :'',
-    uname:'',
+    username:'',
     email:'',
     password:'',
     name:'',
-    dept:'',
+    department:'',
     type:'',
 
   }
@@ -28,11 +28,11 @@ export class AddUserComponent implements OnInit {
   ngOnInit() {
     this.user={
       EmpID :'',
-      uname:'',
+      username:'',
       email:'',
       password:'',
       name:'',
-      dept:'',
+      department:'',
       type:'',
     }
   //   this.userservice.getUsers().subscribe((res:any)=>{
@@ -47,7 +47,7 @@ export class AddUserComponent implements OnInit {
   }
   addUser(){
     console.log(this.user)
-    if(this.user.uname==''){
+    if(this.user.username==''){
       console.log('this fied cannot be empty')
       this.toastr.error("this fied  cannot be empty")
     }
@@ -66,7 +66,7 @@ export class AddUserComponent implements OnInit {
       this.toastr.error("this fied  cannot be empty")
 
     }
-    else if(this.user.dept==''){
+    else if(this.user.department==''){
       console.log('this fied  cannot be empty')
       this.toastr.error("this fied  cannot be empty")
 
