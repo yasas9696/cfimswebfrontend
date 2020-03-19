@@ -24,6 +24,7 @@ import { AllHistorysComponent } from './components/main-pane/all-historys/all-hi
 import { SearchBarComponent } from './components/header/search-bar/search-bar.component';
 import { SlideShowComponent } from './components/main-pane/slide-show/slide-show.component';
 import { NavBarComponent } from './components/main-pane/nav-bar/nav-bar.component';
+import { UserLoginComponent } from './components/user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { NavBarComponent } from './components/main-pane/nav-bar/nav-bar.componen
     AllHistorysComponent,
     SearchBarComponent,
     SlideShowComponent,
-    NavBarComponent
+    NavBarComponent,
+    UserLoginComponent
     
   ],
   imports: [
@@ -76,7 +78,7 @@ ToastrModule.forRoot(),
   ],
   entryComponents:[SlideShowComponent],
   exports:[SlideShowComponent],
-  providers: [SlideShowComponent,AuthGuard],
+  providers: [SlideShowComponent,NavBarComponent,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,14 +18,12 @@ export class NavBarComponent implements OnInit {
     }
   }
  
-  allUsers(){
-    this.router.navigate(['all-users'])
-  }
-  allmovies(){
+  
+  allMovies(){
     this.router.navigate(['all-movies'])
   }
-  addhistory(){
-    this.router.navigate(['add-history'])
+  profileUser(){
+    this.router.navigate(['profile-user'])
   }
 
 
@@ -34,7 +32,10 @@ export class NavBarComponent implements OnInit {
     this.router.navigate(['add-movies'])
   }
   addUser(){
-    this.router.navigate(['add-users'])
+    this.router.navigate(['add-user'])
+  }
+  allHistory(){
+    this.router.navigate(['all-history'])
   }
   
   

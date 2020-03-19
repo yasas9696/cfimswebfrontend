@@ -1,6 +1,6 @@
 export class User {
     EmpID ?: any
-    uname?: any
+    username?: any
     email?: any
     password?: any
     name?: any

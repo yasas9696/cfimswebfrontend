@@ -27,6 +27,7 @@ export class MovieService {
 
   }
 
+  
   updateMovies(movie) {
     const url = this.HOME_URL + 'movies/' + movie.id;
     return this.http.put(url, movie)

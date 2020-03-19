@@ -26,9 +26,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
 
     this.movieservice.getMovies().subscribe((res:any)=>{
+
+      if(res.result!=null){
       res.result.forEach(movie => {
         this.options.push(movie.name)
       });
+
+    }
       })
       
           this.filteredOptions = this.myControl.valueChanges

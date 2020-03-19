@@ -61,6 +61,7 @@ export class UserLoginComponent implements OnInit {
           }
           else{
             this.toastr.warning('network error');
+
           }
         
         
@@ -79,7 +80,7 @@ export class UserLoginComponent implements OnInit {
 
 }
 export class Login{
-  username?:any 
+  username?:any
   password?: any
 
 }

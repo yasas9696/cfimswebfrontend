@@ -2,8 +2,11 @@
     <h3></h3>
     <ul class="example-button-row3">
       <li><a  [routerLink]="['/slideshow']"   routerLinkActive="active">Home</a></li>
-      <li><a [routerLink]="['/all-books']"  routerLinkActive="active">Item Collection</a></li>
+      <li><a [routerLink]="['/all-movies']"  routerLinkActive="active">Item Collection</a></li>
       <li><a [routerLink]="['/profile-user']"  routerLinkActive="active" >My Account</a></li>
+      <li><a [routerLink]="['/add-user']"  routerLinkActive="active" >EMPLOYEES</a></li>
+      <li><a [routerLink]="['/add-movies']"  routerLinkActive="active" >ADD ITEMS</a></li>
+      <li><a [routerLink]="['/all-history']"  routerLinkActive="active" >HISTORY</a></li>
     
       
     </ul>
@@ -12,9 +15,9 @@
     <h3></h3>
     <div class="example-button-row1" *ngIf="isadmin">
     
-      <button mat-raised-button  (click)="addBook()">EMPLOYEES</button>
-      <button mat-raised-button (click)="addAuthor()">ITEMS</button>
-      <button mat-raised-button (click)="borrowBook()">HISTORY</button>
+      <button mat-raised-button  (click)="addUser()">EMPLOYEES</button>
+      <button mat-raised-button (click)="addMovies()">ITEMS</button>
+      <button mat-raised-button (click)="allHistory()">HISTORY</button>
       
     
       

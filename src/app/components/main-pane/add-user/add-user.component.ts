@@ -17,7 +17,7 @@ export class AddUserComponent implements OnInit {
     email:'',
     password:'',
     name:'',
-    department:'',
+    dept:'',
     type:'',
 
   }
@@ -32,7 +32,7 @@ export class AddUserComponent implements OnInit {
       email:'',
       password:'',
       name:'',
-      department:'',
+      dept:'',
       type:'',
     }
   //   this.userservice.getUsers().subscribe((res:any)=>{
@@ -66,7 +66,7 @@ export class AddUserComponent implements OnInit {
       this.toastr.error("this fied  cannot be empty")
 
     }
-    else if(this.user.department==''){
+    else if(this.user.dept==''){
       console.log('this fied  cannot be empty')
       this.toastr.error("this fied  cannot be empty")
 
