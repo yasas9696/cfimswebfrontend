@@ -17,6 +17,7 @@ export class AddMoviesComponent implements OnInit {
     item_qr:'',
     item_capacity:'',
     item_status:'',
+    item_image:'',
    
    
   }
@@ -31,6 +32,7 @@ export class AddMoviesComponent implements OnInit {
       item_qr:'',
       item_capacity:'',
       item_status:'',
+      item_image:'',
   }
 }
 cancel(){

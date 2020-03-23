@@ -13,9 +13,9 @@ import { Router } from '@angular/router';
 })
 export class AllUsersComponent implements OnInit {
 
-  islogedin:boolean= true
+  // islogedin:boolean= true
  
-  isadmin = true
+  // isadmin = true
 
 users:User[] = []
 
@@ -23,28 +23,28 @@ users:User[] = []
   displayedColumns: string[] = ['Name', 'Email','username','password','department','type','action'];
   dataSource = new MatTableDataSource(this.users);
 
-obj={
-  username:''
-}
+// obj={
+//   username:''
+// }
 
 
-  user= {} as User
+  // user= {} as User
 
   ngOnInit() {
 
-    this.obj.username=localStorage.userId
-    this.userservice.getUserbyUsername(this.obj).subscribe((res:any)=>{
-     this.user=res.result[0]
-      console.log(this.user)
-    })
+    // this.obj.username=localStorage.userId
+    // this.userservice.getUserbyUsername(this.obj).subscribe((res:any)=>{
+    //  this.user=res.result[0]
+    //   console.log(this.user)
+    // })
   
 
 
 
 
-    if(localStorage.user != 'admin'){
-      this.isadmin= false
-    }
+    // if(localStorage.user != 'admin'){
+    //   this.isadmin= false
+    // }
     this.userservice.getUsers().subscribe((res:any)=>{
 
       this.users=res.result
@@ -56,12 +56,42 @@ obj={
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  // upatebook(book){
-  //   const ref = this.dialog.open(UpdateBookComponent,{width:'500px',data:book})
-  // }
+ 
   
-  refresh(){
-    this.ngOnInit();
-    this.dataSource._updateChangeSubscription()
-  }
+  removeUser(user){
+    if(confirm('are you sure to remove this user?')){
+      this.userservice.deleteUser(user).subscribe((res:any)=>{
+        if(res.code==1){
+          this.toastr.error("delete failed")
+        }
+        else{
+          this.toastr.success("deleted successfuly")
+          this.users.splice(this.users.indexOf(user) , 1)
+          this.dataSource._updateChangeSubscription()
+        }
+        
+          console.log(res.result)
+        })
+      }
+    }
+   
+    makeAdmin(user){
+      if(confirm('are you sure to make this user as an admin?')){
+        user.type = 'admin'
+        this.userservice.updateUser(user).subscribe((res:any)=>{
+          if(res.code==1){
+            this.toastr.error("failed to make admin")
+          }
+          else{
+            this.toastr.success("make admin successfuly")
+          }
+         })
+      }
+     
+    }
+    refresh(){
+      this.ngOnInit();
+      this.dataSource._updateChangeSubscription()
+    }
+
 }

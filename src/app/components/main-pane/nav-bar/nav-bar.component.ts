@@ -35,7 +35,7 @@ export class NavBarComponent implements OnInit {
     this.router.navigate(['add-user'])
   }
   allHistory(){
-    this.router.navigate(['all-history'])
+    this.router.navigate(['all-historys'])
   }
   
   

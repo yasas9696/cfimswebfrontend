@@ -13,7 +13,7 @@ export class AllHistorysComponent implements OnInit {
 
   historys:History[]=[]
   constructor( private historyservice:HistoryService, private toastr: ToastrService) { }
-  displayedColumns: string[] = ['date','event','jobNumber','department','empName','items'];
+  displayedColumns: string[] = ['date','event','jobNumber','department','empName','items','action'];
   dataSource = new MatTableDataSource(this.historys);
 
 

@@ -1,5 +1,5 @@
 export class User {
-    EmpID ?: any
+    ID ?: any
     username?: any
     email?: any
     password?: any

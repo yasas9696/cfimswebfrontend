@@ -34,12 +34,12 @@ const routes: Routes = [
 
 
       {
-        path : 'add-movie',
+        path : 'add-movies',
         component : AddMoviesComponent
       },
       {
         path: '',
-        redirectTo: '/add-movie',
+        redirectTo: '/add-movies',
         pathMatch: 'full'
       },
 

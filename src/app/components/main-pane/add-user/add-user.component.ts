@@ -12,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 export class AddUserComponent implements OnInit {
 
   user:User={
-    EmpID :'',
+    ID :'',
     username:'',
     email:'',
     password:'',
@@ -27,7 +27,7 @@ export class AddUserComponent implements OnInit {
 
   ngOnInit() {
     this.user={
-      EmpID :'',
+      ID :'',
       username:'',
       email:'',
       password:'',
